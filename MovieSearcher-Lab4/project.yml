@@ -1,0 +1,50 @@
+name: MovieSearcher-Lab4
+options:
+  bundleIdPrefix: com.moviesearcher
+  deploymentTarget:
+    iOS: "15.0"
+  defaultConfig: Debug
+
+settings:
+  SWIFT_VERSION: "5.0"
+
+targets:
+  MovieSearcher-Lab4:
+    type: application
+    platform: iOS
+    deploymentTarget: "15.0"
+    sources:
+      - path: MovieSearcher-Lab4
+        excludes:
+          - "**/*.md"
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.moviesearcher.lab4
+        INFOPLIST_FILE: MovieSearcher-Lab4/Info.plist
+        SWIFT_VERSION: "5.0"
+        TARGETED_DEVICE_FAMILY: "1,2"
+    info:
+      path: MovieSearcher-Lab4/Info.plist
+      properties:
+        CFBundleName: MovieSearcher-Lab4
+        CFBundleDisplayName: MovieSearcher
+        CFBundleIdentifier: com.moviesearcher.lab4
+        CFBundleVersion: "1"
+        CFBundleShortVersionString: "1.0"
+        UIMainStoryboardFile: ""
+        UISceneManifest:
+          UIApplicationSceneManifest:
+            UIApplicationSupportsMultipleScenes: false
+            UISceneConfigurations:
+              UIWindowSceneSessionRoleApplication:
+                - UISceneConfigurationName: Default Configuration
+                  UISceneDelegateClassName: $(PRODUCT_MODULE_NAME).SceneDelegate
+        UILaunchScreen:
+          UIColorName: ""
+        TMDbAPIKey: YOUR_TMDB_API_KEY
+        NSAppTransportSecurity:
+          NSAllowsArbitraryLoads: true
+        UISupportedInterfaceOrientations:
+          - UIInterfaceOrientationPortrait
+          - UIInterfaceOrientationLandscapeLeft
+          - UIInterfaceOrientationLandscapeRight

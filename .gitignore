@@ -1,0 +1,23 @@
+# Xcode user data
+*.xcuserstate
+xcuserdata/
+*.xcuserdatad/
+
+# Build products
+build/
+DerivedData/
+*.o
+*.d
+
+# Archives
+*.xcarchive
+
+# Swift Package Manager
+.build/
+Packages/
+
+# CocoaPods
+Pods/
+
+# macOS
+.DS_Store
