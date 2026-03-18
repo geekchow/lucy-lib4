@@ -79,3 +79,15 @@ struct DetailView: View {
         }
     }
 }
+
+#Preview("DetailView") {
+    let movie = Movie(
+        id: 550, title: "Fight Club",
+        overview: "An insomniac office worker and a soap salesman form an underground fight club.",
+        posterPath: Optional<String>.none, releaseDate: "1999-10-15",
+        voteAverage: 8.4, voteCount: 24000, adult: false
+    )
+    NavigationView {
+        DetailView(movieId: movie.id, movie: movie)
+    }
+}

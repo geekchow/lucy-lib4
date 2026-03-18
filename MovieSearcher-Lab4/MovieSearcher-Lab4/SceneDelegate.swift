@@ -21,11 +21,18 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
 struct ContentView: View {
     var body: some View {
-        TabView {
-            NavigationView { SearchView() }
-                .tabItem { Label("Search", systemImage: "magnifyingglass") }
-            NavigationView { FavoritesView() }
-                .tabItem { Label("Favorites", systemImage: "heart") }
+        ZStack(alignment: .bottom) {
+            TabView {
+                NavigationView { SearchView() }
+                    .tabItem { Label("Search", systemImage: "magnifyingglass") }
+                NavigationView { FavoritesView() }
+                    .tabItem { Label("Favorites", systemImage: "heart") }
+            }
         }
+        .ignoresSafeArea(edges: .bottom)
     }
+}
+
+#Preview("ContentView") {
+    ContentView()
 }

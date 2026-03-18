@@ -49,3 +49,7 @@ struct FavoritesView: View {
         }
     }
 }
+
+#Preview("FavoritesView") {
+    NavigationView { FavoritesView() }
+}

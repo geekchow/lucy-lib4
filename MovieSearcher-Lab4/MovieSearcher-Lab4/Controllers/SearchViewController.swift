@@ -216,3 +216,7 @@ struct SearchView: View {
         }
     }
 }
+
+#Preview("SearchView") {
+    NavigationView { SearchView() }
+}

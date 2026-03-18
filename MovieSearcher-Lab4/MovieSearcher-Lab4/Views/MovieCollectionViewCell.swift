@@ -55,3 +55,15 @@ struct MovieCardView: View {
         }
     }
 }
+
+#Preview("MovieCardView") {
+    let movie = Movie(
+        id: 1, title: "Inception",
+        overview: "A thief who steals secrets through dreams.",
+        posterPath: Optional<String>.none, releaseDate: "2010-07-16",
+        voteAverage: 8.8, voteCount: 32000, adult: false
+    )
+    MovieCardView(movie: movie)
+        .frame(width: 110)
+        .padding()
+}
